@@ -1,147 +1,181 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Seller Panel | MchumaSoftwares</title>
-    <link rel="stylesheet" href="sellers-panel.css" />
-    <style>
-      body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-        background-color: #f9f9f9;
-      }
-      nav {
-        background-color: #232f3e;
-        color: white;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 0.5em 1em;
-      }
-      nav .logo {
-        font-size: 1.5em;
-        font-weight: bold;
-      }
-      nav ul {
-        list-style: none;
-        display: flex;
-        margin: 0;
-        padding: 0;
-      }
-      nav ul li {
-        margin-left: 20px;
-      }
-      nav ul li a {
-        color: white;
-        text-decoration: none;
-        font-size: 1em;
-      }
-      .seller-panel {
-        padding: 2em;
-      }
-      .panel-header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom: 2em;
-      }
-      .welcome-text {
-        font-size: 1.5em;
-        font-weight: bold;
-      }
-      .user-info {
-        background-color: white;
-        padding: 1em;
-        border-radius: 8px;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-      }
-      .metrics {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        gap: 20px;
-        margin-bottom: 2em;
-      }
-      .metric {
-        background-color: white;
-        padding: 1em;
-        border-radius: 8px;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        text-align: center;
-      }
-      .metric h3 {
-        margin: 0;
-        font-size: 1.2em;
-        color: #555;
-      }
-      .metric p {
-        font-size: 2em;
-        font-weight: bold;
-        margin: 0;
-        color: #232f3e;
-      }
-      .shortcuts {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        gap: 20px;
-      }
-      .shortcut {
-        background-color: #232f3e;
-        color: white;
-        padding: 1.5em;
-        border-radius: 8px;
-        text-align: center;
-        font-size: 1.2em;
-        text-decoration: none;
-        font-weight: bold;
-      }
-      .shortcut:hover {
-        background-color: #37475a;
-      }
-      .orders-section,
-      .products-section {
-        margin-top: 2em;
-      }
-      table {
-        width: 100%;
-        border-collapse: collapse;
-        background-color: white;
-        margin-top: 1em;
-        border-radius: 8px;
-        overflow: hidden;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-      }
-      table th,
-      table td {
-        padding: 1em;
-        text-align: left;
-        border-bottom: 1px solid #f1f1f1;
-      }
-      table th {
-        background-color: #232f3e;
-        color: white;
-      }
-      table tr:hover {
-        background-color: #f9f9f9;
-      }
-    </style>
-  </head>
-  <body>
-    <!-- Navigation Bar -->
-    <nav>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Seller Panel | MchumaSoftwares</title>
+  <link rel="stylesheet" href="sellers-panel.css" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+      display: flex;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      width: 250px;
+      height: 100vh;
+      background-color: #232f3e;
+      color: white;
+      padding: 1em 0;
+      position: fixed;
+    }
+
+    .sidebar h2 {
+      text-align: center;
+      margin: 0 0 1em;
+      font-size: 1.5em;
+    }
+
+    .sidebar ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .sidebar ul li {
+      margin: 10px 0;
+      padding: 0.5em 1em;
+    }
+
+    .sidebar ul li a {
+      color: white;
+      text-decoration: none;
+      font-size: 1em;
+      display: block;
+    }
+
+    .sidebar ul li:hover {
+      background-color: #37475a;
+    }
+
+    /* Main Content */
+    .main-content {
+      margin-left: 250px;
+      width: calc(100% - 250px);
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Navbar */
+    .navbar {
+      background-color: #232f3e;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.5em 1em;
+    }
+
+    .navbar .logo {
+      font-size: 1.5em;
+      font-weight: bold;
+    }
+
+    .navbar ul {
+      list-style: none;
+      display: flex;
+      margin: 0;
+      padding: 0;
+    }
+
+    .navbar ul li {
+      margin-left: 20px;
+    }
+
+    .navbar ul li a {
+      color: white;
+      text-decoration: none;
+      font-size: 1em;
+    }
+
+    /* Footer */
+    .footer {
+      background-color: #232f3e;
+      color: white;
+      text-align: center;
+      padding: 1em 0;
+      margin-top: auto;
+    }
+
+    /* Content Styling */
+    .seller-panel {
+      padding: 2em;
+    }
+
+    .panel-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 2em;
+    }
+
+    .metrics {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      margin-bottom: 2em;
+    }
+
+    .metric, .shortcut {
+      background-color: white;
+      padding: 1em;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1em;
+      background-color: white;
+    }
+
+    table th, table td {
+      padding: 1em;
+      border-bottom: 1px solid #f1f1f1;
+    }
+
+    table th {
+      background-color: #232f3e;
+      color: white;
+    }
+
+    table tr:hover {
+      background-color: #f9f9f9;
+    }
+  </style>
+</head>
+<body>
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <h2>Seller Panel</h2>
+    <ul>
+      <li><a href="#">Dashboard</a></li>
+      <li><a href="#">Products</a></li>
+      <li><a href="#">Orders</a></li>
+      <li><a href="#">Analytics</a></li>
+      <li><a href="logout.html">Logout</a></li>
+    </ul>
+  </div>
+
+  <!-- Main Content -->
+  <div class="main-content">
+    <!-- Navbar -->
+    <div class="navbar">
       <div class="logo">MchumaSoftwares Seller Panel</div>
       <ul>
-        <li><a href="#">Dashboard</a></li>
-        <li><a href="#">Products</a></li>
-        <li><a href="#">Orders</a></li>
-        <li><a href="logout.html">Logout</a></li>
+        <li><a href="#">Help</a></li>
+        <li><a href="#">Settings</a></li>
+        <li><a href="#">Profile</a></li>
       </ul>
-    </nav>
+    </div>
 
     <!-- Seller Panel Content -->
     <div class="seller-panel">
-      <!-- Panel Header -->
       <div class="panel-header">
         <div class="welcome-text">Welcome, Seller Name!</div>
         <div class="user-info">
@@ -168,14 +202,6 @@
           <h3>Ratings</h3>
           <p>4.8/5</p>
         </div>
-      </div>
-
-      <!-- Shortcuts Section -->
-      <div class="shortcuts">
-        <a href="add-product.html" class="shortcut">Add Product</a>
-        <a href="view-orders.html" class="shortcut">View Orders</a>
-        <a href="analytics.html" class="shortcut">View Analytics</a>
-        <a href="support.html" class="shortcut">Support</a>
       </div>
 
       <!-- Products Section -->
@@ -206,38 +232,12 @@
           </tbody>
         </table>
       </div>
-
-      <!-- Orders Section -->
-      <div class="orders-section">
-        <h2>Recent Orders</h2>
-        <table>
-          <thead>
-            <tr>
-              <th>Order ID</th>
-              <th>Customer</th>
-              <th>Total</th>
-              <th>Status</th>
-              <th>Actions</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>#1001</td>
-              <td>Jane Doe</td>
-              <td>$120</td>
-              <td>Shipped</td>
-              <td><a href="#">View</a></td>
-            </tr>
-            <tr>
-              <td>#1002</td>
-              <td>John Smith</td>
-              <td>$80</td>
-              <td>Processing</td>
-              <td><a href="#">View</a></td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
     </div>
-  </body>
+
+    <!-- Footer -->
+    <div class="footer">
+      <p>&copy; 2025 MchumaSoftwares. All Rights Reserved.</p>
+    </div>
+  </div>
+</body>
 </html>
