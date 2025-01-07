@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Orders | MchumaSoftwares</title>
+    <link rel="stylesheet" href="sellers-panel.css" />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f9f9f9;
+      }
+      /* Sidebar styles */
+      .sidebar {
+        height: 100%;
+        width: 250px;
+        background-color: #232f3e;
+        padding-top: 20px;
+        position: fixed;
+        left: 0;
+        top: 0;
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+      .sidebar .logo {
+        font-size: 1.5em;
+        font-weight: bold;
+        color: white;
+        margin-bottom: 30px;
+      }
+      .sidebar ul {
+        list-style: none;
+        padding: 0;
+      }
+      .sidebar ul li {
+        margin: 10px 0;
+      }
+      .sidebar ul li a {
+        color: white;
+        text-decoration: none;
+        font-size: 1.1em;
+      }
+      .sidebar ul li a:hover {
+        color: #00bcd4;
+      }
+
+      /* Main content area */
+      .main-content {
+        margin-left: 270px;
+        padding: 2em;
+      }
+
+      /* Navbar styles */
+      nav {
+        background-color: #232f3e;
+        color: white;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.5em 1em;
+      }
+      nav .logo {
+        font-size: 1.5em;
+        font-weight: bold;
+      }
+      nav ul {
+        list-style: none;
+        display: flex;
+        margin: 0;
+        padding: 0;
+      }
+      nav ul li {
+        margin-left: 20px;
+      }
+      nav ul li a {
+        color: white;
+        text-decoration: none;
+        font-size: 1em;
+      }
+
+      /* Footer styles */
+      footer {
+        background-color: #232f3e;
+        color: white;
+        text-align: center;
+        padding: 1em;
+        position: fixed;
+        width: 100%;
+        bottom: 0;
+      }
+
+      /* Table for orders */
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        background-color: white;
+        margin-top: 1em;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+      table th,
+      table td {
+        padding: 1em;
+        text-align: left;
+        border-bottom: 1px solid #f1f1f1;
+      }
+      table th {
+        background-color: #232f3e;
+        color: white;
+      }
+      table tr:hover {
+        background-color: #f9f9f9;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <div class="logo">MchumaSoftwares</div>
+      <ul>
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="orders.html">Orders</a></li>
+        <li><a href="logout.html">Logout</a></li>
+      </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+      <!-- Navigation Bar -->
+      <nav>
+        <div class="logo">Seller Panel</div>
+        <ul>
+          <li><a href="#">Dashboard</a></li>
+          <li><a href="#">Products</a></li>
+          <li><a href="#">Orders</a></li>
+          <li><a href="logout.html">Logout</a></li>
+        </ul>
+      </nav>
+
+      <!-- Orders Section -->
+      <div class="orders-section">
+        <h2>Orders</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Order ID</th>
+              <th>Customer</th>
+              <th>Total</th>
+              <th>Status</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>#1001</td>
+              <td>Jane Doe</td>
+              <td>$120</td>
+              <td>Shipped</td>
+              <td><a href="#">View</a> | <a href="#">Cancel</a></td>
+            </tr>
+            <tr>
+              <td>#1002</td>
+              <td>John Smith</td>
+              <td>$80</td>
+              <td>Processing</td>
+              <td><a href="#">View</a> | <a href="#">Cancel</a></td>
+            </tr>
+            <tr>
+              <td>#1003</td>
+              <td>Alice Johnson</td>
+              <td>$200</td>
+              <td>Delivered</td>
+              <td><a href="#">View</a> | <a href="#">Cancel</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2025 MchumaSoftwares. All rights reserved.</p>
+    </footer>
+  </body>
+</html>

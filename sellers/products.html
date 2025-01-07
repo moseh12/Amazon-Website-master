@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Products | MchumaSoftwares</title>
+    <link rel="stylesheet" href="sellers-panel.css" />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f9f9f9;
+      }
+      /* Sidebar styles */
+      .sidebar {
+        height: 100%;
+        width: 250px;
+        background-color: #232f3e;
+        padding-top: 20px;
+        position: fixed;
+        left: 0;
+        top: 0;
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+      .sidebar .logo {
+        font-size: 1.5em;
+        font-weight: bold;
+        color: white;
+        margin-bottom: 30px;
+      }
+      .sidebar ul {
+        list-style: none;
+        padding: 0;
+      }
+      .sidebar ul li {
+        margin: 10px 0;
+      }
+      .sidebar ul li a {
+        color: white;
+        text-decoration: none;
+        font-size: 1.1em;
+      }
+      .sidebar ul li a:hover {
+        color: #00bcd4;
+      }
+
+      /* Main content area */
+      .main-content {
+        margin-left: 270px;
+        padding: 2em;
+      }
+
+      /* Navbar styles */
+      nav {
+        background-color: #232f3e;
+        color: white;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.5em 1em;
+      }
+      nav .logo {
+        font-size: 1.5em;
+        font-weight: bold;
+      }
+      nav ul {
+        list-style: none;
+        display: flex;
+        margin: 0;
+        padding: 0;
+      }
+      nav ul li {
+        margin-left: 20px;
+      }
+      nav ul li a {
+        color: white;
+        text-decoration: none;
+        font-size: 1em;
+      }
+
+      /* Footer styles */
+      footer {
+        background-color: #232f3e;
+        color: white;
+        text-align: center;
+        padding: 1em;
+        position: fixed;
+        width: 100%;
+        bottom: 0;
+      }
+
+      /* Product Form */
+      .product-form {
+        background-color: white;
+        padding: 2em;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        margin-bottom: 2em;
+      }
+      .product-form h2 {
+        margin-bottom: 1em;
+      }
+      .product-form label {
+        font-size: 1em;
+        margin-bottom: 0.5em;
+        display: block;
+      }
+      .product-form input,
+      .product-form textarea {
+        width: 100%;
+        padding: 1em;
+        margin-bottom: 1em;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        font-size: 1em;
+      }
+      .product-form button {
+        background-color: #232f3e;
+        color: white;
+        padding: 1em;
+        border: none;
+        border-radius: 5px;
+        font-size: 1em;
+        cursor: pointer;
+      }
+      .product-form button:hover {
+        background-color: #00bcd4;
+      }
+
+      /* Product List */
+      .product-list {
+        margin-top: 2em;
+      }
+      .product-list table {
+        width: 100%;
+        border-collapse: collapse;
+        background-color: white;
+        margin-top: 1em;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+      .product-list table th,
+      .product-list table td {
+        padding: 1em;
+        text-align: left;
+        border-bottom: 1px solid #f1f1f1;
+      }
+      .product-list table th {
+        background-color: #232f3e;
+        color: white;
+      }
+      .product-list table tr:hover {
+        background-color: #f9f9f9;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <div class="logo">MchumaSoftwares</div>
+      <ul>
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="orders.html">Orders</a></li>
+        <li><a href="logout.html">Logout</a></li>
+      </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+      <!-- Navigation Bar -->
+      <nav>
+        <div class="logo">Seller Panel</div>
+        <ul>
+          <li><a href="#">Dashboard</a></li>
+          <li><a href="#">Products</a></li>
+          <li><a href="#">Orders</a></li>
+          <li><a href="logout.html">Logout</a></li>
+        </ul>
+      </nav>
+
+      <!-- Add Product Form -->
+      <div class="product-form">
+        <h2>Add New Product</h2>
+        <form action="/upload_product" method="POST" enctype="multipart/form-data">
+          <label for="product-name">Product Name</label>
+          <input type="text" id="product-name" name="product-name" required />
+
+          <label for="product-description">Product Description</label>
+          <textarea id="product-description" name="product-description" rows="5" required></textarea>
+
+          <label for="product-price">Price</label>
+          <input type="number" id="product-price" name="product-price" required />
+
+          <label for="product-image">Product Image</label>
+          <input type="file" id="product-image" name="product-image" accept="image/*" required />
+
+          <button type="submit">Upload Product</button>
+        </form>
+      </div>
+
+      <!-- Products List -->
+      <div class="product-list">
+        <h2>Existing Products</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Product Name</th>
+              <th>Description</th>
+              <th>Price</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Product A</td>
+              <td>This is a description of Product A.</td>
+              <td>$99</td>
+              <td><a href="#">Edit</a> | <a href="#">Delete</a></td>
+            </tr>
+            <tr>
+              <td>Product B</td>
+              <td>This is a description of Product B.</td>
+              <td>$150</td>
+              <td><a href="#">Edit</a> | <a href="#">Delete</a></td>
+            </tr>
+            <tr>
+              <td>Product C</td>
+              <td>This is a description of Product C.</td>
+              <td>$200</td>
+              <td><a href="#">Edit</a> | <a href="#">Delete</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2025 MchumaSoftwares. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
