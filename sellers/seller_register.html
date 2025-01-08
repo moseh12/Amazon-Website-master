@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seller Registration</title>
+    <link rel="stylesheet" href="seller_registration.css">
+</head>
+<body>
+    <!-- Logo -->
+    <a href="/">
+        <img src="assets/amazon_logo_dark.png" class="logo" width="100px" alt="Amazon Logo" />
+    </a>
+
+    <!-- Seller Registration Form -->
+    <div class="registration-container">
+        <h1 class="registration-title">Register as a Seller</h1>
+
+        <!-- Business Name -->
+        <label for="business-name" class="input-label">Business Name</label>
+        <input type="text" id="business-name" placeholder="Enter your business name" required />
+
+        <!-- Business Email -->
+        <label for="business-email" class="input-label">Business Email</label>
+        <input type="email" id="business-email" placeholder="Enter your business email" required />
+
+        <!-- Phone Number -->
+        <label for="phone-number" class="input-label">Phone Number</label>
+        <input type="text" id="phone-number" placeholder="Enter your phone number" required />
+
+        <!-- Password -->
+        <label for="password" class="input-label">Password</label>
+        <input type="password" id="password" placeholder="Create a password" required />
+
+        <!-- Confirm Password -->
+        <label for="confirm-password" class="input-label">Confirm Password</label>
+        <input type="password" id="confirm-password" placeholder="Confirm your password" required />
+
+        <!-- Business Address -->
+        <label for="business-address" class="input-label">Business Address</label>
+        <textarea id="business-address" placeholder="Enter your business address" rows="4" required></textarea>
+
+        <!-- Terms and Conditions -->
+        <div class="terms-container">
+            <input type="checkbox" id="agree-terms" required />
+            <label for="agree-terms">
+                I agree to the <a href="#">Terms and Conditions</a> and <a href="#">Privacy Policy</a>.
+            </label>
+        </div>
+
+        <!-- Register Button -->
+        <button class="register-btn">Register</button>
+
+        <!-- Already Registered -->
+        <p class="already-registered">
+            Already have an account? <a href="seller_login.html">Sign in</a>
+        </p>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-links">
+            <a href="#">Conditions of Use</a>
+            <a href="#">Privacy Notice</a>
+            <a href="#">Help</a>
+        </div>
+        <p class="footer-copyright">
+            &copy; 1996-2025, Amazon.com, Inc. or its affiliates
+        </p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seller Sign-In</title>
+    <link rel="stylesheet" href="seller_signin.css">
+</head>
+<body>
+    <a href="/">
+        <img src="assets/amazon_logo_dark.png" class="logo" alt="Logo" width="100px" />
+    </a>
+    <div class="signin-container">
+        <h1 class="signin-title">Seller Sign-In</h1>
+        <form action="/seller_dashboard.html" method="POST">
+            <h5 class="input-label">Email or Mobile Number</h5>
+            <input type="text" name="email" placeholder="Enter your email or phone number" required>
+            
+            <h5 class="input-label">Password</h5>
+            <input type="password" name="password" placeholder="Enter your password" required>
+            
+            <button type="submit" class="signin-button">Sign In</button>
+            
+            <p class="signin-options">
+                By signing in, you agree to our <span>Conditions of Use</span> and <span>Privacy Notice</span>.
+            </p>
+        </form>
+        <p class="forgot-password">
+            <a href="#">Forgot your password?</a>
+        </p>
+        <hr>
+        <h4>New to our Seller Program?</h4>
+        <a href="seller_register.html">
+            <button class="create-account-button">Create your Seller Account</button>
+        </a>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-links">
+            <a href="#">Conditions of Use</a>
+            <a href="#">Privacy Notice</a>
+            <a href="#">Help</a>
+        </div>
+        <p class="footer-copyright">&copy; 1996-2025, Amazon.com, Inc. or its affiliates</p>
+    </footer>
+</body>
+</html>

@@ -7,44 +7,68 @@
    <link rel="stylesheet" href="sigin.css">
 </head>
 <body>
-   <a href="/"
-      ><img src="assets/amazon_logo_dark.png" class="logo" width="100px" />
-    </a>
-    <div class="sigin-container">
-      <h1 class="sigin-title">Sign up</h1>
-      <h5 class="input-lable">Your name</h5>
+   <!-- Logo -->
+   <a href="/">
+      <img src="assets/amazon_logo_dark.png" class="logo" width="100px" alt="Amazon Logo" />
+   </a>
+
+   <!-- Sign Up Container -->
+   <div class="sigin-container">
+      <h1 class="sigin-title">Sign Up</h1>
+
+      <!-- Name Input -->
+      <h5 class="input-label">Your Name</h5>
       <input type="text" placeholder="First and last name" />
-      <h5 class="input-lable">Mobile number or email</h5>
-      <input type="text">
-      <h5 class="input-lable">Password</h5>
-      <input type="password" placeholder="At least 6 characters">
+
+      <!-- Mobile/Email Input -->
+      <h5 class="input-label">Mobile Number or Email</h5>
+      <input type="text" placeholder="Enter your mobile number or email" />
+
+      <!-- Password Input -->
+      <h5 class="input-label">Password</h5>
+      <input type="password" placeholder="At least 6 characters" />
+
+      <!-- Continue Button -->
       <button>Continue</button>
-      <button><a href="sellers/seller_dashboard.html">Register as A seller</a></button>
+
+      <!-- Register as Seller Button -->
+      <button class="register-seller-btn">
+         <a href="sellers/seller_dashboard.html">Register as a Seller</a>
+      </button>
+
+      <!-- Terms and Help Section -->
       <p class="sigin-codit">
-        By continuing, you agree to Amazon's <span>Coditions of Use</span> and
-        <span>Privacy Notice.</span>
-        <p class="sigin-help">&#9656 <span>Need help</span></p>
-        <hr>
-        <h4>Buying for work?</h4>
-        <p class="sigin-bussiness"><span>Shop on Amazon Business</span></p>
+         By continuing, you agree to Amazon's 
+         <span>Conditions of Use</span> and <span>Privacy Notice.</span>
       </p>
-    </div>
-    <div class="sigin-bottom">
+      <p class="sigin-help">&#9656; <span>Need help?</span></p>
+      
+      <hr>
+
+      <!-- Business Section -->
+      <h4>Buying for work?</h4>
+      <p class="sigin-business"><span>Shop on Amazon Business</span></p>
+   </div>
+
+   <!-- Bottom Section -->
+   <div class="sigin-bottom">
       <hr>
       <p>Have an account?</p>
-      <hr>
-    </div>
-    <a href="/signin.html">
-      <button class="sigin-signup-btn">Login with Amazon account</button>
-    </a>
-    <!-- Footer -->
-     <footer>
+      <a href="/signin.html">
+         <button class="sigin-signup-btn">Login with Amazon account</button>
+      </a>
+   </div>
+
+   <!-- Footer -->
+   <footer>
       <div class="footer-links">
          <a href="#">Conditions of Use</a>
          <a href="#">Privacy Notice</a>
          <a href="#">Help</a>
       </div>
-      <p class="footer-cop-right">&copy; 1996-2025, Amazon.com, Inc. or its affiliates</p>
-     </footer>
+      <p class="footer-copyright">
+         &copy; 1996-2025, Amazon.com, Inc. or its affiliates
+      </p>
+   </footer>
 </body>
 </html>

@@ -1,0 +1,118 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo {
+    margin-top: 20px;
+}
+
+.signin-container {
+    background: white;
+    padding: 20px;
+    width: 100%;
+    max-width: 400px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-top: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.signin-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.input-label {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.signin-button {
+    width: 100%;
+    background-color: #f0c14b;
+    border: 1px solid #a88734;
+    padding: 10px;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #111;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.signin-button:hover {
+    background-color: #ddb347;
+}
+
+.signin-options {
+    font-size: 12px;
+    color: #555;
+    margin-top: 10px;
+}
+
+.forgot-password a {
+    font-size: 12px;
+    color: #0066c0;
+    text-decoration: none;
+}
+
+.forgot-password a:hover {
+    text-decoration: underline;
+}
+
+.create-account-button {
+    width: 100%;
+    background-color: #e7e9ec;
+    border: 1px solid #a6a6a6;
+    padding: 10px;
+    border-radius: 4px;
+    font-size: 16px;
+    color: #111;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.create-account-button:hover {
+    background-color: #d6d8db;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+    font-size: 12px;
+}
+
+.footer-links a {
+    margin: 0 10px;
+    color: #0066c0;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+.footer-copyright {
+    font-size: 12px;
+    color: #555;
+    text-align: center;
+    margin-bottom: 20px;
+}
